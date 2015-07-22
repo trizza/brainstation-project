@@ -1,0 +1,34 @@
+body {
+    padding-top: 100px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.caption {
+    height: 60px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 4px;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+.add-to-cart {
+    padding: 9px;
+}
+
+/* Bootstrap Overrides */
+.navbar-brand {
+    font-size: 2em;
+}
