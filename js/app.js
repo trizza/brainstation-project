@@ -7,21 +7,29 @@ $(document).ready(function(){
 	$('.shoes-item').click(get_shoes);
 });
 
+
+//Function that populates Shopping Cart page with items
+//from the "Shirt" category.
 function get_shirts () {
 	clear_items();
 	page_load('shirts');
 }
 
+//Function that populates Shopping Cart page with items
+//from the "Pants" category.
 function get_pants () {
 	clear_items();
 	page_load('pants');
 }
 
+//Function that populates Shopping Cart page with items
+//from the "Shoes" category.
 function get_shoes () {
 	clear_items();
 	page_load('shoes');
 }
 
+//Clears all products/items on the Shopping Cart page.
 function clear_items () {
 	for (var i = 0; i < 5; i++) {
 		$('.product-img[data-index="'+i+'"]').html('');
@@ -30,6 +38,7 @@ function clear_items () {
 	}
 }
 
+//AJAX call to GET items from their respective APIs.
 function page_load(category){
 
 	if (category == "shirts") {
@@ -76,6 +85,7 @@ function page_load(category){
 
 }
 
+//Display "Shirts"
 function load_shirts(data){
 	shirt_obj = data.shirts;
 	var i = 0;
@@ -101,6 +111,7 @@ function load_shirts(data){
 	}
 }
 
+//Display "Pants"
 function load_pants(data){
 	pants_obj = data.pants;
 	var i = 0;
@@ -126,6 +137,7 @@ function load_pants(data){
 	}
 }
 
+//Dispaly "Shoes"
 function load_shoes(data){
 	shoes_obj = data.shoes;
 	var i = 0;
